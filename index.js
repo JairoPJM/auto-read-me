@@ -28,7 +28,10 @@ const questions = [
         type:"list",
         name:"license",
         message:"Which license would you like to use?",
-        choices:["MIT License","The Unlicense","Boost Software License 1.0","None"]
+        choices:["MIT License","The Unlicense","Boost Software License 1.0","None"],
+        validate:(userLicense)=>{
+            // if(userLicense==="MIT License")
+        }
     },{
         type:"input",
         name:"questions",
