@@ -1,8 +1,80 @@
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
 
-  # Jairo
+function renderLicenseBadge(license) {
+  let badgeUrl = '';
+  let linkUrl = '';
+
+  switch (license) {
+    case 'MIT License':
+      badgeUrl = 'https://img.shields.io/badge/License-MIT-yellow.svg';
+      linkUrl = 'https://opensource.org/licenses/MIT';
+      break;
+    case 'The Unlicense':
+      badgeUrl = 'https://img.shields.io/badge/license-Unlicense-blue.svg';
+      linkUrl = 'https://unlicense.org/';
+      break;
+    case 'Boost Software License 1.0':
+      badgeUrl = 'https://img.shields.io/badge/License-Boost%201.0-lightblue.svg';
+      linkUrl = 'https://www.boost.org/LICENSE_1_0.txt';
+      break;
+    default:
+      return '';
+  }
+
+  return `![License Badge](${badgeUrl})`;
+}
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+  let linkUrl = '';
+
+  switch (license) {
+    case 'MIT License':
+      linkUrl = 'https://opensource.org/licenses/MIT';
+      break;
+    case 'The Unlicense':
+      linkUrl = 'https://unlicense.org/';
+      break;
+    case 'Boost Software License 1.0':
+      linkUrl = 'https://www.boost.org/LICENSE_1_0.txt';
+      break;
+    default:
+      return '';
+  }
+
+  return `(${linkUrl})`;
+}
+
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  let licenseSection=""
+  switch(license){
+    case 'MIT License':
+      licenseSection = MIT;
+      break;
+    case 'The Unlicense':
+      licenseSection = Unlicense;
+      break;
+    case 'Boost Software License 1.0':
+      licenseSection = BOOST;
+      break;
+    default:
+      return '';
+  }
+  return `${licenseSection}`
+}
+
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+  return `
+  # ${data.title}
   
   ## Description
-  JOD
+  ${data.description}
 
   ## Table of contents
   
@@ -12,23 +84,86 @@
 - [License](#license)
   
   ## Installation
-  OWJO
+  ${data.installation}
 
   ## Usage
-  dJWOD
+  ${data.usage}
 
   ## Credits
-  WDJO
+  ${data.credits}
 
   (Github)-https://github.com/ 
+
   (VScode)-https://code.visualstudio.com/ 
+
   (google)-https://www.google.com/ 
+  
   (w3school)-https://www.w3schools.com/
 
-  ## License[![License Badge](https://img.shields.io/badge/license-Unlicense-blue.svg)
-  The Unlicense
+  ## License${renderLicenseBadge(data.license)}
+  ${data.license}
 
-  [This is free and unencumbered software released into the public domain.
+  ${renderLicenseSection(data.license)}
+
+  For more information, please refer to <${renderLicenseLink(data.license)}>
+  
+  ## Questions
+  If you have any questions you can email me using this email
+  ${data.email}
+  And see my other projects here https://github.com/${data.questions}
+
+
+`;
+}
+
+
+let MIT=`
+
+Copyright (c) [2023] [Pedro Jairo Macassi]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`
+
+let BOOST=`Boost Software License - Version 1.0 - August 17th, 2003
+
+Permission is hereby granted, free of charge, to any person or organization
+obtaining a copy of the software and accompanying documentation covered by
+this license (the "Software") to use, reproduce, display, distribute,
+execute, and transmit the Software, and to prepare derivative works of the
+Software, and to permit third-parties to whom the Software is furnished to
+do so, all subject to the following:
+
+The copyright notices in the Software and this entire statement, including
+the above license grant, this restriction and the following disclaimer,
+must be included in all copies of the Software, in whole or in part, and
+all derivative works of the Software, unless such copies or derivative
+works are solely in the form of machine-executable object code generated by
+a source language processor.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.`
+
+let Unlicense=`This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
 distribute this software, either in source code form or as a compiled
@@ -50,13 +185,7 @@ IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
 OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-]
-  For more information, please refer to <(https://unlicense.org/)>
-  
-  ## Questions
-  If you have any questions you can email me using this email
-  JAIROMACASSI@GMAIL.com
-
-  https://github.com/JairoPJM
+`
 
 
+module.exports = generateMarkdown;
