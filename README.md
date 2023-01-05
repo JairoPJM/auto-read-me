@@ -1,8 +1,9 @@
 
-  # JAIRO
-  
+  <p align="center"
+  # d
+  </p>
   ## Description
-  
+  d
 
   ## Table of contents
   
@@ -12,13 +13,13 @@
 - [License](#license)
   
   ## Installation
-  
+  d
 
   ## Usage
-  
+  d
 
   ## Credits
-  
+  d
 
   (Github)-https://github.com/ 
 
