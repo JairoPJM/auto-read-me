@@ -1,6 +1,6 @@
 
-  <h1 align="center"
-  # Jairo
+  <h1 align="center">
+  # JAIRo
   </h1>
 
   ## Description
