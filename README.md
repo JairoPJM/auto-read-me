@@ -1,6 +1,6 @@
 <h1 align="center">AUTO-README </h1>
 <p>
-    ![License Badge](https://img.shields.io/badge/license-Unlicense-blue.svg)
+ 
     <img src="https://img.shields.io/github/repo-size/jairoPJM/auto-read-me" />
     <img src="https://img.shields.io/github/languages/top/jairoPJM/auto-read-me"  />
     <img src="https://img.shields.io/github/last-commit/jairoPJM/auto-read-me" />
