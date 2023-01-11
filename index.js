@@ -2,12 +2,9 @@
 const generateMarkdown=require("./utils/generateMarkdown")
 const inquirer=require("inquirer")
 const fs=require("fs")
+const path = require('path');
 // TODO: Create an array of questions for user input
-// console.log('\x1b[32m', 'This is a green message!'); 
-// const input = process.argv[2];
-// if (input === 'start') {
-// init();
-// }
+console.log('\x1b[32m', 'This is a green message!');
 
 const questions = [
     {
@@ -35,20 +32,14 @@ const questions = [
         name:"installation",
         message:"What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running"
     },{
-        type:"input",
-        name:"usage",
-        message:"Enter what you are wanting in your usage section"
-    },{
-        type:"input",
-        name:"credits",
-        message:"Enter who worked on the project \x1b[34mEx-John Doe"
-    },{
         type:"list",
         name:"license",
         message:"Which license would you like to use?",
         choices:["MIT License","The Unlicense","Boost Software License 1.0","None"],
-        
-        
+    },{
+        type:"input",
+        name:"credits",
+        message:"Enter who worked on the project \x1b[34mEx-John Doe"
     },{
         type:"input",
         name:"questions",
@@ -61,8 +52,8 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFileSync(fileName,data)
+function writeToFile(fileName, data, location) {
+    fs.writeFileSync(path.join(location,fileName),data)
 }
 
 // TODO: Create a function to initialize app
@@ -72,10 +63,9 @@ function init() {
             console.log(answers.title)
             const markdown=generateMarkdown(answers)
             console.log(markdown)
-            writeToFile("test.md",markdown)
+            writeToFile("README.md",markdown,'./Develop/')
         })
 }
 
 // Function call to initialize app
-
 init();

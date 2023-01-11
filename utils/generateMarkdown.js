@@ -76,10 +76,10 @@ function generateMarkdown(data) {
   </h1>
 
   ## Description
-  -${data.descriptionMot}
-  -${data.descriptionBuild}
-  -${data.descriptionProblem}
-  -${data.descriptionBuild}
+  ${data.descriptionMot}
+  ${data.descriptionBuild}
+  ${data.descriptionProblem}
+  ${data.descriptionBuild}
 
   ## Table of contents
   
@@ -91,8 +91,6 @@ function generateMarkdown(data) {
   ## Installation
   ${data.installation}
 
-  ## Usage
-  ${data.usage}
 
   ## Credits
   ${data.credits}
@@ -124,7 +122,7 @@ function generateMarkdown(data) {
 
 let MIT=`
 
-Copyright (c) [2023] [Pedro Jairo Macassi]
+Copyright (c) [2023] []
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
