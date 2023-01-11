@@ -32,9 +32,6 @@ To install this you will first need to have node installed into your computer, N
 Then clone this to your local.once everything is cloned you can run npm i. To insure that all the npm extensions are installed, then run "npm start"in terminal to start the program. 
 After you run through the questions, you can get the finished readme file in develop folder.
 ## Usage 💡
+https://user-images.githubusercontent.com/111899130/211917677-75ebd5fd-6671-49af-8e4b-e25cd440cc1b.mp4
 
-![](https://user-images.githubusercontent.com/111899130/211915513-6b67d15a-0690-42e2-9b5c-3be610e7b45f.mp4
-)
-![](https://user-images.githubusercontent.com/111899130/211915513-6b67d15a-0690-42e2-9b5c-3be610e7b45f.mp4)
-![]https://user-images.githubusercontent.com/111899130/211915513-6b67d15a-0690-42e2-9b5c-3be610e7b45f.mp4
 
