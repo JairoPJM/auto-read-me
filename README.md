@@ -69,6 +69,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 
   For more information, please refer to <(https://unlicense.org/)>
+<<<<<<< HEAD
     ## Credits
   Jairo Macassi
 
@@ -79,6 +80,8 @@ OTHER DEALINGS IN THE SOFTWARE.
   (google)-https://www.google.com/ 
 
   (w3school)-https://www.w3schools.com/
+=======
+>>>>>>> b4a3b793a7694b88813a1bcf9476eb1de8cd4521
   
   ## Questions
   If you have any questions you can email me using this email
