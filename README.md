@@ -33,4 +33,5 @@ Then clone this to your local.once everything is cloned you can run npm i. To in
 After you run through the questions, you can get the finished readme file in develop folder.
 ## Usage 💡
 
-![](2023-01-11 15-41-26.mp4)
+![](https://user-images.githubusercontent.com/111899130/211915513-6b67d15a-0690-42e2-9b5c-3be610e7b45f.mp4
+)
