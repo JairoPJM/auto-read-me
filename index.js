@@ -3,7 +3,11 @@ const generateMarkdown=require("./utils/generateMarkdown")
 const inquirer=require("inquirer")
 const fs=require("fs")
 // TODO: Create an array of questions for user input
-console.log('\x1b[32m', 'This is a green message!');
+// console.log('\x1b[32m', 'This is a green message!'); 
+// const input = process.argv[2];
+// if (input === 'start') {
+// init();
+// }
 
 const questions = [
     {
@@ -73,4 +77,5 @@ function init() {
 }
 
 // Function call to initialize app
+
 init();
