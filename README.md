@@ -1,10 +1,9 @@
 <h1 align="center">AUTO-README </h1>
-<p>
- 
+
     <img src="https://img.shields.io/github/repo-size/jairoPJM/auto-read-me" />
     <img src="https://img.shields.io/github/languages/top/jairoPJM/auto-read-me"  />
     <img src="https://img.shields.io/github/last-commit/jairoPJM/auto-read-me" />
-    </p>
+    
 
 ## Description 
 This app makes it easier to make a readme file. helps you save time in the long run.
